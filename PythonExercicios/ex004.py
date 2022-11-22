@@ -1,0 +1,5 @@
+n1 = input("Digite alguma coisa: ")
+print(type(n1))
+print('O valor é número? {}'.format(n1.isnumeric()))
+print('O valor é alfabético? {}'.format(n1.isalpha()))
+print('O valor é alfanumérico? {}'.format(n1.isalnum()))
