@@ -6,7 +6,7 @@ else:
     print('Parabéns, você está respeitando as regras de transito!')
 
 
-### Resolução do Professor ###
+### RESOLUÇÃO DO PROFESSOR ###
 
 velocidade = float(input('Qual a velocidade atual do carro? '))
 if velocidade > 80:
