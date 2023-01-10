@@ -11,7 +11,7 @@ else:
 ### RESOLUÇÃO DO PROFESSOR ###
 
 print('-=' * 20)
-print('Analisador de Triâ')
+print('Analisador de Triângulo')
 print('-=' * 20)
 r1 = float(input('Primeiro segmento: '))
 r2 = float(input('Segundo segmento: '))
