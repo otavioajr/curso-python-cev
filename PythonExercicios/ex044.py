@@ -11,13 +11,23 @@ print('''Os pagamentos em dinheiro ou cheque a vista tem 10% de desconto!
 print('=-'*20)
 print('Qual a forma de pagamento?')
 pagamento = str(input())
-print('=-'*20)
-if pagamento == 'dinheiro' or 'cheque':
+if pagamento == 'dinheiro' or pagamento == 'cheque':
     preco = valor_produto - (valor_produto * 0.1)
     print('Sua compra à vista vai custar R${}'.format(preco))
-elif pagamento == 'cartao' or 'cartão':
-    preco = valor_produto - (valor_produto * 0.05)
-    print('Sua compra à vista no cartão vai custar R${}'.format(preco))
+elif pagamento == 'cartao' or pagamento == 'cartão':
+    parcelar = str(input('Irá parcelar a compra? '))
+    if parcelar == 'sim':
+        qtd_parcelas = int(input('Em quantas vezes deseja parcelar a compra? '))
+        if qtd_parcelas == 2:
+            preco = valor_produto / qtd_parcelas
+            print('O valor do produto não terá desconto! O valor a ser pago é R${}, ficando R${} cada parcela.'.format(valor_produto, preco))
+        else:
+            preco = valor_produto - (valor_produto * 0.05)
+            print('Sua compra à vista no cartão vai custar R${}'.format(preco))
+else:
+    print('Saiu sem erro')
+            
+
 
 
 #elif pagamento == 'parcelado':
